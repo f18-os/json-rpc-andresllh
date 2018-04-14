@@ -14,6 +14,9 @@ server = rpc.get_peer_proxy()
 result = server.swapper('Hello World!')
 # "!dlroW olleH"
 print(result)
+
+print server.nop({1:[2,3]})
+
 rpc.close() # Closes the socket 's' also
 
 

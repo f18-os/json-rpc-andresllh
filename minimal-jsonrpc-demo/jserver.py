@@ -13,6 +13,11 @@ class ServerServices(object):
   def swapper(self, txt):
     return ''.join(reversed(list(txt)))
 
+  @request
+  def nop(self, txt):
+    print txt
+    return txt
+
 # Quick-and-dirty TCP Server:
 ss = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ss.bind(('localhost', 50001))
